@@ -1,32 +1,38 @@
-<img src="./assets/profile-header.svg" alt="Navnoor Bawa - quantitative finance and research engineering" width="100%" />
+<img src="./assets/profile-header.svg" alt="Navnoor Bawa - quantitative research and research engineering" width="100%" />
 
-## Quantitative finance and research engineering
+## Quantitative research and research engineering
 
-I build research systems for fixed income, derivatives, market microstructure, and statistical learning. My work emphasizes source lineage, reproducible calculations, explicit assumptions, and a clean separation between official observations, market proxies, and model outputs.
+I build empirical research systems for derivatives, volatility, fixed income, and statistical arbitrage. I care about the parts that determine whether a result survives contact with reality: point-in-time data, executable timestamps, transaction costs, leakage controls, multiple testing, reproducible metrics, and explicit negative results.
 
-### Current work
+I am a Computer Science and Engineering undergraduate at Thapar Institute (2027), founder and quantitative researcher at Navnoor Bawa Research LLC, and a freelance markets analyst at [FX Empire](https://www.fxempire.com/author/navnoorbawa). Previously, I worked as a quantitative research intern at Quant Insider and as a WorldQuant BRAIN Research Consultant.
 
-**[U.S. Treasury Rates Monitor](https://treasury-rates-monitor.vercel.app/)** - a production-deployed rates workspace using official U.S. Treasury CMT data and Federal Reserve H.15 history, with curve spreads, date-to-date comparison, sourced event windows, ex-post regime analysis, and separately disclosed delayed Treasury-futures proxies.
+[LinkedIn](https://linkedin.com/in/navnoorbawa) &nbsp;|&nbsp; [Research writing](https://navnoorbawa.substack.com/) &nbsp;|&nbsp; [Medium](https://medium.com/@navnoorbawa) &nbsp;|&nbsp; [YouTube](https://youtube.com/@TheMathematicalTrader) &nbsp;|&nbsp; [X](https://x.com/navnoorquant)
 
-### Selected research
+### Selected work
 
-| Project | Research focus |
+| Project | What it demonstrates |
 | --- | --- |
-| [U.S. Treasury Rates Monitor](https://github.com/NavnoorBawa/treasury-rates-monitor) | Fixed-income data engineering, curve analytics, historical regimes, and institutional financial visualization |
-| [Polymarket Prediction System](https://github.com/NavnoorBawa/polymarket-prediction-system) | Prediction-market features, ensemble models, calibration, expected value, and risk-aware sizing |
-| [Volatility Surface Anomaly Detection](https://github.com/NavnoorBawa/Volatility-Surface-Anomaly-Detection-Trading-System) | Volatility-surface construction, anomaly detection, regime features, and options-chain research |
-| [Options Pricing and Strategy Analyzer](https://github.com/NavnoorBawa/Option-Pricing-and-Strategy-Analyzer) | Pricing models, Greeks, strategy P&amp;L, volatility surfaces, and scenario analysis |
+| **[Russell 3000 Statistical Arbitrage](https://github.com/NavnoorBawa/russell3000-pairs-trading)** | Point-in-time pair selection, Kalman spreads, regime gating, institutional cost profiles, 19 walk-forward windows, and statistical validation. The realistic t+1 result is disclosed as insignificant rather than presented as deployable alpha. |
+| **[WTI Volatility Research](https://github.com/NavnoorBawa/WTI-Crude-Oil-Futures)** | A documented look-ahead failure, purge/embargo correction, negative-result retraction, and a separately validated HAR-IV volatility forecast. |
+| **[U.S. Treasury Rates Monitor](https://github.com/NavnoorBawa/treasury-rates-monitor)** | Official Treasury CMT data, Federal Reserve H.15 history, curve analytics, ex-post regime classification, deterministic verification, and clearly separated delayed futures proxies. **[Live system](https://treasury-rates-monitor.vercel.app/)** |
+| **[Derivatives Pricing Engines](https://github.com/NavnoorBawa/Quantitative-Options-Trading)** | Option pricing, Greeks, Monte Carlo simulation, volatility modeling, uncertainty estimation, and risk-aware strategy analysis. |
+| **[Interest-Rate Volatility Smile Engine](https://github.com/NavnoorBawa/Interest-Rate-Volatility-Smile-Engine)** | SABR calibration and the practical interpretation of alpha, beta, rho, skew, and model limitations in rate derivatives. |
+| **[Trilemma Beta Bitcoin Tournament](https://github.com/NavnoorBawa/Bitcoin-Price-Prediction-Model)** | First place among 214 teams in the 2024 tournament. |
 
-### Research standards
+### Research principles
 
-- Recalculate headline metrics from raw observations rather than trusting presentation-layer summaries.
-- Treat missing data, non-trading days, stale quotes, and publication lags as explicit states.
-- Keep official rates, delayed traded proxies, model estimates, and forecasts in separate datasets.
-- Prefer reproducible pipelines, deterministic verification, and unit-explicit exports.
-- State methodological and licensing limitations directly.
+- Align every feature, label, and fill to information available at the decision timestamp.
+- Recompute headline metrics from raw observations and retain the artifacts needed to reproduce them.
+- Compare against simple baselines before attributing value to a complex model.
+- Model costs, stale observations, missing data, publication lags, and non-trading days explicitly.
+- Keep official observations, delayed market proxies, forecasts, and scenario outputs in separate datasets.
+- Document failed hypotheses and retractions with the same precision as positive results.
 
-### Technical focus
+### Toolkit
 
-`Python` `TypeScript` `React` `Node.js` `time-series analysis` `statistical learning` `data visualization` `financial APIs`
+**Languages:** Python, C++, SQL, TypeScript<br>
+**Research:** NumPy, pandas, SciPy, PyTorch, scikit-learn, XGBoost, QuantLib<br>
+**Methods:** time-series analysis, statistical inference, walk-forward validation, factor models, volatility modeling, derivatives pricing, Monte Carlo simulation<br>
+**Engineering:** React, Node.js, Linux, Git, CI, automated testing, financial data pipelines
 
-Open to quantitative research, fixed-income analytics, and research engineering opportunities.
+Open to quantitative research, derivatives, fixed-income analytics, and research engineering opportunities.
