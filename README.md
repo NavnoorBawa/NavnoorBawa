@@ -8,23 +8,14 @@ I am the founder and quantitative researcher at **Navnoor Bawa Research LLC**, a
 
 [Research writing][writing] | [LinkedIn][linkedin] | [Medium][medium] | [YouTube][youtube] | [Email][email]
 
-## Selected research
+## Research portfolio
 
-- **[Russell 3000 Statistical Arbitrage][stat-arb]** ([research site][stat-arb-site])
-
-  Kalman-spread and regime-gated pairs research with five cost profiles and 19 walk-forward windows. Only the final 10 windows are treated as clean out-of-sample evidence because earlier windows inherit future universe selection. Under realistic next-day fills, the OOS result is statistically insignificant (`p = 0.83`); the negative conclusion is retained rather than presented as deployable alpha.
-
-- **[Joint SPX/VIX Calibration and Volatility System][vol-system]** ([live system][vol-system-live])
-
-  Joint Heston/Bates calibration, path-dependent volatility research, and 637 automated tests. The audit trail records four corrections - look-ahead bias, a circular feature, label noise, and a strike-rolling bug - and explicitly separates model-implied P&L from traded fills.
-
-- **[WTI Crude Oil Volatility Research][wti]** ([live system][wti-live])
-
-  The original direction edge was identified as look-ahead leakage and retracted. The surviving HAR-IV model reaches 72.7% next-week volatility-direction accuracy versus a 65.1% mean-reversion baseline across 439 purged OOS weeks; its level forecast records `R^2 = 0.50` versus `0.32` for persistence.
-
-- **[U.S. Treasury Rates Monitor][treasury]** ([live system][treasury-live])
-
-  Official U.S. Treasury CMT observations, Federal Reserve H.15 history, curve spreads, event windows, and ex-post regime analysis. Delayed CBOT futures proxies remain explicitly separate from the official daily curve, and deterministic release checks independently verify data lineage and calculations.
+| Program | Validation record | Current conclusion |
+| --- | --- | --- |
+| **[Russell 3000 Statistical Arbitrage][stat-arb]** ([site][stat-arb-site]) | 19 walk-forward windows; only W10-W19 are selection-clean OOS. Five cost profiles. Survivorship bias is disclosed. | No deployable alpha under next-day execution (`p = 0.83`). The null result is retained. |
+| **[Joint SPX/VIX Calibration and Volatility System][vol-system]** ([live][vol-system-live]) | 637 tests. Four audit corrections covering look-ahead, a circular feature, label noise, and strike rolling. | SPX smile RMSE: 0.52 vol points. The VIX-options leg is disabled for structural misspecification; P&L remains model-implied. |
+| **[WTI Crude Oil Volatility Research][wti]** ([live][wti-live]) | 439 purged OOS weeks. HAR-IV compared with mean-reversion and persistence baselines. | Volatility direction: 72.7% vs 65.1%. Level `R^2`: 0.50 vs 0.32. The leaked direction strategy was retracted. |
+| **[U.S. Treasury Rates Monitor][treasury]** ([live][treasury-live]) | Direct Treasury XML, Federal Reserve H.15 history, and deterministic release checks. | Official daily CMT analytics and delayed CBOT futures proxies remain separate by design. |
 
 Additional derivatives work: [SABR interest-rate volatility smile engine][sabr] | [options pricing and strategy analyzer][options]
 
@@ -34,7 +25,7 @@ Additional derivatives work: [SABR interest-rate volatility smile engine][sabr] 
 
 ## Research standard
 
-Every result should make the information set, execution timestamp, sample window, missing-data treatment, trading costs, baselines, and validation protocol explicit. I prefer a reproducible negative result to a profitable backtest that depends on hidden assumptions.
+I treat the audit trail as part of the result. Every public claim should state its information set, execution timestamp, sample construction, missing-data treatment, costs, baselines, validation protocol, and known failure modes. I prefer a reproducible negative result to a profitable backtest that depends on hidden assumptions.
 
 ## Technical focus
 
