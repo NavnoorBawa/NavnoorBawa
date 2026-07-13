@@ -12,9 +12,9 @@ I am the founder and quantitative researcher at **Navnoor Bawa Research LLC**, a
 
 | Program | Validation record | Current conclusion |
 | --- | --- | --- |
-| **[Russell 3000 Statistical Arbitrage][stat-arb]** ([site][stat-arb-site]) | 19 walk-forward windows; only W10-W19 are selection-clean OOS. Five cost profiles. Survivorship bias is disclosed. | No deployable alpha under next-day execution (`p = 0.83`). The null result is retained. |
+| **[Russell 3000 Statistical Arbitrage][stat-arb]** ([site][stat-arb-site]) | 19 walk-forward windows; only W10-W19 are selection-clean out-of-sample (OOS). Five cost profiles. Survivorship bias is disclosed. | No deployable alpha under next-day execution (*p* = 0.83). The null result is retained. |
 | **[Joint SPX/VIX Calibration and Volatility System][vol-system]** ([live][vol-system-live]) | 637 tests. Four audit corrections covering look-ahead, a circular feature, label noise, and strike rolling. | SPX smile RMSE: 0.52 vol points. The VIX-options leg is disabled for structural misspecification; P&L remains model-implied. |
-| **[WTI Crude Oil Volatility Research][wti]** ([live][wti-live]) | 439 purged OOS weeks. HAR-IV compared with mean-reversion and persistence baselines. | Volatility direction: 72.7% vs 65.1%. Level `R^2`: 0.50 vs 0.32. The leaked direction strategy was retracted. |
+| **[WTI Crude Oil Volatility Research][wti]** ([live][wti-live]) | 439 purged OOS weeks. HAR-IV compared with mean-reversion and persistence baselines. | Volatility direction: 72.7% vs 65.1%. Level R-squared: 0.50 vs 0.32. The leaked direction strategy was retracted. |
 | **[U.S. Treasury Rates Monitor][treasury]** ([live][treasury-live]) | Direct Treasury XML, Federal Reserve H.15 history, and deterministic release checks. | Official daily CMT analytics and delayed CBOT futures proxies remain separate by design. |
 
 Additional derivatives work: [SABR interest-rate volatility smile engine][sabr] | [options pricing and strategy analyzer][options]
