@@ -12,12 +12,12 @@ I am the founder and quantitative researcher at **Navnoor Bawa Research LLC**, a
 
 | Program | Validation record | Current conclusion |
 | --- | --- | --- |
-| **[Russell 3000 Statistical Arbitrage][stat-arb]** ([site][stat-arb-site]) | 19 walk-forward windows; only W10-W19 are selection-clean out-of-sample (OOS). Five cost profiles. Survivorship bias is disclosed. | No deployable alpha under next-day execution (*p* = 0.83). The null result is retained. |
-| **[Joint SPX/VIX Calibration and Volatility System][vol-system]** ([live][vol-system-live]) | 637 tests. Four audit corrections covering look-ahead, a circular feature, label noise, and strike rolling. | SPX smile RMSE: 0.52 vol points. The VIX-options leg is disabled for structural misspecification; P&L remains model-implied. |
-| **[WTI Crude Oil Volatility Research][wti]** ([live][wti-live]) | 439 purged OOS weeks. HAR-IV compared with mean-reversion and persistence baselines. | Volatility direction: 72.7% vs 65.1%. Level R-squared: 0.50 vs 0.32. The leaked direction strategy was retracted. |
+| **[Russell 3000 Statistical Arbitrage][stat-arb]** ([site][stat-arb-site]) | One continuous 11-window walk-forward with next-day (t+1) fills and per-stock costs. Newey-West, block bootstrap, Deflated Sharpe and Benjamini-Hochberg tests. Survivorship bias is disclosed. | No edge out of sample: pooled OOS Sharpe −0.33 (Newey-West *p* = 0.56); 1 of 35,491 pairs survives Benjamini-Hochberg; no better than the Gatev distance method (*p* = 0.88). The null result is retained. |
+| **[Joint SPX/VIX Calibration and Volatility System][vol-system]** ([live][vol-system-live]) | Seven correction rounds (C16–C22): look-ahead, a circular feature, label noise, strike rolling, and a ~270-finding full-system audit. CI-tested, with mutation-checked look-ahead tests. | Heston fits the SPX surface to 0.9–1.4 vol points in-sample and 1.3–3.0 out of sample across five 2026 sessions, with vol-of-vol on its 2.0 ceiling in two. All P&L is mark-to-model; the VIX-options leg stays off until enough quote sessions exist. |
+| **[WTI Crude Oil Volatility Research][wti]** ([live][wti-live]) | 926 purged OOS weeks (May 2008 – Sep 2026). HAR-IV compared with mean-reversion and persistence baselines; paired Diebold-Mariano test. | Volatility direction: 72.7% vs 66.6% for mean reversion (Diebold-Mariano z ≈ 4.1, HAC; ahead in 16 of 19 years). Level R-squared: 0.452 vs 0.173 for persistence. The leaked direction strategy was retracted. |
 | **[U.S. Treasury Rates Monitor][treasury]** ([live][treasury-live]) | Direct Treasury XML, Federal Reserve H.15 history, and deterministic release checks. | Official daily CMT analytics and delayed CBOT futures proxies remain separate by design. |
 
-Additional derivatives work: [SABR interest-rate volatility smile engine][sabr] | [options pricing and strategy analyzer][options]
+Additional derivatives work: [options pricing and strategy analyzer][options] (BSM, Leisen-Reimer/CRR trees, Monte Carlo, SSVI/SVI local vol, American IV; 3,300+ tests in CI)
 
 ## Recognition
 
@@ -30,7 +30,7 @@ I treat the audit trail as part of the result. Every public claim should state i
 ## Technical focus
 
 - **Research:** time-series analysis, statistical inference, walk-forward validation, factor models, volatility modeling, derivatives pricing, Monte Carlo simulation
-- **Engineering:** Python, C++, SQL, NumPy, pandas, SciPy, PyTorch, scikit-learn, XGBoost, QuantLib, TypeScript, React, Linux, Git, CI
+- **Engineering:** Python, C++, SQL, NumPy, pandas, SciPy, PyTorch, scikit-learn, XGBoost, TypeScript, React, Linux, Git, CI
 
 Open to quantitative research, derivatives, fixed-income analytics, and research engineering opportunities.
 
@@ -39,7 +39,6 @@ Open to quantitative research, derivatives, fixed-income analytics, and research
 [linkedin]: https://linkedin.com/in/navnoorbawa
 [medium]: https://medium.com/@navnoorbawa
 [options]: https://github.com/NavnoorBawa/Option-Pricing-and-Strategy-Analyzer
-[sabr]: https://github.com/NavnoorBawa/Interest-Rate-Volatility-Smile-Engine
 [stat-arb-site]: https://navnoorbawa.github.io/russell3000-pairs-trading/
 [stat-arb]: https://github.com/NavnoorBawa/russell3000-pairs-trading
 [treasury-live]: https://treasury-rates-monitor.vercel.app/
